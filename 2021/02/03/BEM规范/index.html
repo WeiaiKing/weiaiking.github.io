@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="BEM规范BEM的命名规矩很容易记：block-name__element-name–modifier-name，也就是模块名 + 元素名 + 修饰器名。 BEM–block，element，modifer  达到一个语义化的css命名方式 12345&lt;div class&#x3D;&quot;page-btn&quot;&gt;   &lt;button type&#x3D;&quot;button&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="aking-blog">
+<meta property="og:url" content="http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/index.html">
+<meta property="og:site_name" content="aking-blog">
+<meta property="og:description" content="BEM规范BEM的命名规矩很容易记：block-name__element-name–modifier-name，也就是模块名 + 元素名 + 修饰器名。 BEM–block，element，modifer  达到一个语义化的css命名方式 12345&lt;div class&#x3D;&quot;page-btn&quot;&gt;   &lt;button type&#x3D;&quot;button&amp;quot">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-03T07:29:48.358Z">
+<meta property="article:modified_time" content="2021-02-03T07:29:48.358Z">
+<meta property="article:author" content="Aking">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>aking-blog</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/projects_url">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2021/02/03/Javascript%E8%A7%84%E8%8C%83(vue,react)/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&text="><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&is_video=false&description="><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&name=&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&t="><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BEM%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">BEM规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BEM%E5%91%BD%E5%90%8D%E5%A5%BD%E9%95%BF"><span class="toc-number">1.1.</span> <span class="toc-text">BEM命名好长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E9%A5%B0%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">修饰器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%91%BD%E5%90%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D-%E7%81%B5%E6%B4%BB%E8%87%AA%E7%94%B1%E7%BB%84%E5%90%88%E5%91%BD%E5%90%8D"><span class="toc-number">1.3.</span> <span class="toc-text">一些命名常用单词-灵活自由组合命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%84%E5%88%99"><span class="toc-number">1.4.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">1.5.</span> <span class="toc-text">最后</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Aking</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-02-03T07:29:48.358Z" itemprop="datePublished">2021-02-03</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="BEM规范"><a href="#BEM规范" class="headerlink" title="BEM规范"></a>BEM规范</h2><p>BEM的命名规矩很容易记：block-name__element-name–modifier-name，也就是模块名 + 元素名 + 修饰器名。</p>
+<p>BEM–block，element，modifer  达到一个语义化的css命名方式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;page-btn&quot;</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;page-btn__prev&quot;</span>&gt;</span>上一页<span class="tag">&lt;/<span class="name">button</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;page-btn__next&quot;</span>&gt;</span>下一页<span class="tag">&lt;/<span class="name">button</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面我们用双下划线来明确区分模块名和元素名，当然也可以用单下划线，比如page-btn_prev和page-btn_next。我们只需保留BEM的思想，其命名规范可以任意变通。</p>
+<ul>
+<li>BEM 就三个元素 模块名-元素名_修饰器</li>
+</ul>
+<h3 id="BEM命名好长"><a href="#BEM命名好长" class="headerlink" title="BEM命名好长"></a>BEM命名好长</h3><p>其实每个使用BEM的开发团队多多少少会改变其命名规范</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">比如Instagram团队使用的驼峰式:</span><br><span class="line">.blockName-elementName--modifierName &#123; &#x2F;* ... *&#x2F; &#125; </span><br><span class="line">我也可以不使用驼峰,因为识别这模式有__,--,还有用单下划线_</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>还是使用原来的BEM规范吧就__–,嵌套多的话可以使用单下划线</p>
+</blockquote>
+<h3 id="修饰器"><a href="#修饰器" class="headerlink" title="修饰器"></a>修饰器</h3><p>.要使用修饰符,  一个颜色，一个状态,响应式</p>
+<h3 id="一些命名常用单词-灵活自由组合命名"><a href="#一些命名常用单词-灵活自由组合命名" class="headerlink" title="一些命名常用单词-灵活自由组合命名"></a>一些命名常用单词-灵活自由组合命名</h3><blockquote>
+<p>header,nav,main,body,footer,wrap,container,box,item,text,left,right,up,down,input,button,img,detail,desc,time,price,data,search,label,sex,gender,girl,boy,name,content,address,phone,number,datetime,next,pre,login,confirm,register,reset,submit,commit,begin,end,start,finish</p>
+</blockquote>
+<p>灵活去嵌套，是类名更加的语义化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.header__login</span><br><span class="line">.div__header__next</span><br><span class="line">.div__footer-button__text</span><br></pre></td></tr></table></figure>
+<h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><ul>
+<li>模块(card卡片模块)__元素(div)–修饰器(active)</li>
+<li>__ –  两个下划线，两个中划线，BEM就这么简单</li>
+<li>更多具体<a target="_blank" rel="noopener" href="https://en.bem.info/methodology/quick-start/#introduction">https://en.bem.info/methodology/quick-start/#introduction</a></li>
+</ul>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>在使用scss的时候呢？我们就可以不用写模块前缀啦！因为可以直接就使用scss嵌套了</p>
+<p>只需定义好模块名字就不会产生冲突</p>
+
+  </div>
+  <div>
+    <a href="https://github.com/WeiaiKing/weiaiking.github.io/edit/akingblog/source/_posts/BEM规范.md"
+      target="_blank">编辑</a>
+  </div>
+</article>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/projects_url">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BEM%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">BEM规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BEM%E5%91%BD%E5%90%8D%E5%A5%BD%E9%95%BF"><span class="toc-number">1.1.</span> <span class="toc-text">BEM命名好长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E9%A5%B0%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">修饰器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%91%BD%E5%90%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D-%E7%81%B5%E6%B4%BB%E8%87%AA%E7%94%B1%E7%BB%84%E5%90%88%E5%91%BD%E5%90%8D"><span class="toc-number">1.3.</span> <span class="toc-text">一些命名常用单词-灵活自由组合命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%84%E5%88%99"><span class="toc-number">1.4.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">1.5.</span> <span class="toc-text">最后</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&text="><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&is_video=false&description="><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&title="><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&name=&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/02/03/BEM%E8%A7%84%E8%8C%83/&t="><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2021
+    Aking
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/projects_url">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
